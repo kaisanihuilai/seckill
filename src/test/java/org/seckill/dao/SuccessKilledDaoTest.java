@@ -25,7 +25,7 @@ public class SuccessKilledDaoTest {
 
     @Test
     public void queryByIdWithSeckill() {
-        SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(1000L);
-        System.out.println(successKilled);
+        //SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(1000L);
+        //System.out.println(successKilled);
     }
 }

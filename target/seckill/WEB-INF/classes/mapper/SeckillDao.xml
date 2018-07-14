@@ -5,7 +5,7 @@
 <mapper namespace="org.seckill.dao.SeckillDao">
 
     <!-- -->
-    <update id="reduceNuber" >
+    <update id="reduceNumber" >
         update seckill
         set
           number = number - 1
