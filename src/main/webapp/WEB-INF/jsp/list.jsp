@@ -34,7 +34,7 @@
                                 <td><fmt:formatDate value="${item.startTime}" pattern="yyyy-MM-dd HH:mm:ss"/> </td>
                                 <td><fmt:formatDate value="${item.endTime}" pattern="yyyy-MM-dd HH:mm:ss"/> </td>
                                 <td><fmt:formatDate value="${item.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/> </td>
-                                <td><a class="btn btn-info" href="/seckill/${item.seckillId}/detail"></a></td>
+                                <td><a class="btn btn-info" href="/seckill/${item.seckillId}/detail">Link</a></td>
                             </tr>
                         </c:forEach>
                 </tbody>
@@ -47,5 +47,5 @@
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- 包括所有已编译的插件 -->
-<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </html>
