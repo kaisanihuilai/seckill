@@ -85,7 +85,7 @@ public class SeckillServiceImpl implements SeckillService {
                     throw new RepeatKillException("重复秒杀");
                 }else {
                     //秒杀成功
-                    SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(seckillId);
+                    SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(seckillId,userPhone);
                     return new SeckillExecution(seckillId,SeckillStateEnum.SUCCESS,successKilled);
                 }
             }
