@@ -67,7 +67,7 @@ public class SeckillServiceImpl implements SeckillService {
      * 2：
      */
     public SeckillExecution executeSeckill(long seckillId, long userPhone, String md5) throws SeckillException, RepeatKillException, SeckillCloseException {
-        if (md5 ==null || md5.equals(getMD5(seckillId))){
+        if (md5 ==null || !md5.equals(getMD5(seckillId))){
             throw new SeckillException("秒杀时间还没到");
         }
         Date nowTime = new Date();
@@ -85,7 +85,7 @@ public class SeckillServiceImpl implements SeckillService {
                     throw new RepeatKillException("重复秒杀");
                 }else {
                     //秒杀成功
-                    SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(seckillId,userPhone);
+                    SuccessKilled successKilled = successKilledDao.queryByIdWithSeckill(seckillId);
                     return new SeckillExecution(seckillId,SeckillStateEnum.SUCCESS,successKilled);
                 }
             }
