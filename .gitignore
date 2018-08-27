@@ -2,3 +2,5 @@
 .idea
 target
 seckill.iml
+.idea/workspace.xml
+target/*
